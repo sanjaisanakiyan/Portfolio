@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html><head>
+<base href="http://localhost:5500/">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="game-cursor" class="is-hidden">
+  <div class="cursor-ring"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-arm cursor-top"></div>
+  <div class="cursor-arm cursor-bottom"></div>
+  <div class="cursor-arm cursor-left"></div>
+  <div class="cursor-arm cursor-right"></div>
+  <div class="cursor-label"></div>
+</div>
+<script src="assets/js/main.js"></script>
+<script>
+window.addEventListener('load', () => {
+  const log = [];
+  log.push('cursorEl: ' + !!document.getElementById('game-cursor'));
+  log.push('before move html class: ' + document.documentElement.className);
+  
+  window.dispatchEvent(new MouseEvent('mousemove', { clientX: 200, clientY: 300, bubbles: true }));
+  log.push('after move html class: ' + document.documentElement.className);
+  log.push('after move cursor class: ' + document.getElementById('game-cursor').className);
+
+  const out = document.createElement('div');
+  out.id = 'debug-log';
+  out.textContent = log.join(' | ');
+  document.body.appendChild(out);
+});
+</script>
+
+
+<div id="debug-log">cursorEl: true | before move html class:  | after move html class:  | after move cursor class: is-hidden</div></body></html>

@@ -1,0 +1,277 @@
+﻿        <article class="project-card-large" data-engine="unity" data-type="gameplay" id="card-project-driving">
+          <div class="project-media-col" id="card-visual-driving" data-active-index="0" onclick="handleCardImageClick('driving')" tabindex="0" role="button" aria-label="Open Burnout Blitz gallery and case study">
+            <img src="assets/images/portfolio/arcade-driving/arcade-driving-gameplay.jpg" alt="Burnout Blitz - Arcade Driving in Unity" class="project-image" id="card-img-driving" loading="lazy">
+            <div class="project-media-overlay" aria-hidden="true"></div>
+            <div class="project-gallery-badge" id="card-badge-driving">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+              <span>1 / 4 &bull; GAMEPLAY</span>
+            </div>
+            <div class="project-quick-view-prompt">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              <span>FULLSCREEN &bull; CASE STUDY</span>
+            </div>
+            <div class="project-gallery-thumbs" id="card-thumbs-driving" onclick="event.stopPropagation()">
+              <button type="button" class="project-gallery-thumb active" onclick="switchProjectCardImage('driving', 0)" aria-label="View Gameplay">
+                <img src="assets/images/portfolio/arcade-driving/arcade-driving-gameplay.jpg" alt="Gameplay">
+              </button>
+              <button type="button" class="project-gallery-thumb" onclick="switchProjectCardImage('driving', 1)" aria-label="View Garage Selection">
+                <img src="assets/images/portfolio/arcade-driving/arcade-driving-garage.jpg" alt="Garage">
+              </button>
+              <button type="button" class="project-gallery-thumb" onclick="switchProjectCardImage('driving', 2)" aria-label="View Crash &amp; Restart State">
+                <img src="assets/images/portfolio/arcade-driving/arcade-driving-end.jpg" alt="Crash State">
+              </button>
+              <button type="button" class="project-gallery-thumb" onclick="switchProjectCardImage('driving', 3)" aria-label="View Unity Editor Setup">
+                <img src="assets/images/portfolio/arcade-driving/arcade-driving-editor.jpg" alt="Unity Editor">
+              </button>
+            </div>
+          </div>
+
+          <div class="project-info-col">
+            <div class="project-meta-top">
+              <span class="project-category-badge">GAMEPLAY &bull; VEHICLE SYSTEMS &bull; AI</span>
+              <span class="project-engine-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12l-4-4v3H6v2h12v3l4-4z"/></svg>
+                UNITY
+              </span>
+            </div>
+
+            <h3 class="project-title">BURNOUT BLITZ</h3>
+
+            <p class="project-description">
+              A Unity-based arcade driving prototype featuring responsive third-person vehicle controls in a city traffic environment. Built with custom physics tuning, dynamic AI traffic behavior, garage-based car selection, and structured state transitions.
+            </p>
+
+            <div class="project-highlights-list">
+              <span class="highlight-pill">Responsive vehicle controls</span>
+              <span class="highlight-pill">AI-driven traffic</span>
+              <span class="highlight-pill">Real-time collision detection</span>
+              <span class="highlight-pill">Garage-based car selection</span>
+              <span class="highlight-pill">Structured gameplay loop</span>
+              <span class="highlight-pill">Restart &amp; exit states</span>
+            </div>
+
+            <div class="project-actions-row">
+              <button type="button" class="btn-view-project" onclick="openProjectModal('driving')">
+                <span>VIEW CASE STUDY</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+              <button type="button" class="btn-project-gallery" onclick="openLightbox('driving', 0)" aria-label="View Burnout Blitz Gallery">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                <span>GALLERY (4)</span>
+              </button>
+              <a href="https://drive.google.com/drive/folders/1zGgl4j7DXApgY53wCyXXkQ_auMhkfxrR?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-external-link" title="Open Google Drive Archive">
+                <span>ARCHIVE</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==================================================================
+             PROJECT 02: MAZE RUNNER (THIRD-PERSON LEVEL DESIGN)
+             ================================================================== -->
+        <article class="project-card-large reverse" data-engine="unreal" data-type="level-design" id="card-project-maze">
+          <div class="project-media-col" id="card-visual-maze" data-active-index="0" onclick="handleCardImageClick('maze')" tabindex="0" role="button" aria-label="Open Maze Runner gallery and level study">
+            <img src="assets/images/portfolio/third-person-maze/maze-gameplay.jpg" alt="Maze Runner - Unreal Engine 5 Third-Person Level Design" class="project-image" id="card-img-maze" loading="lazy">
+            <div class="project-media-overlay" aria-hidden="true"></div>
+            <div class="project-gallery-badge" id="card-badge-maze">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+              <span>1 / 3 &bull; THIRD-PERSON</span>
+            </div>
+            <div class="project-quick-view-prompt">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              <span>FULLSCREEN &bull; LEVEL STUDY</span>
+            </div>
+            <div class="project-gallery-thumbs" id="card-thumbs-maze" onclick="event.stopPropagation()">
+              <button type="button" class="project-gallery-thumb active" onclick="switchProjectCardImage('maze', 0)" aria-label="View Third-Person Gameplay">
+                <img src="assets/images/portfolio/third-person-maze/maze-gameplay.jpg" alt="Third-Person View">
+              </button>
+              <button type="button" class="project-gallery-thumb" onclick="switchProjectCardImage('maze', 1)" aria-label="View Spatial Layout Map">
+                <img src="assets/images/portfolio/third-person-maze/maze-map.jpg" alt="Spatial Map">
+              </button>
+              <button type="button" class="project-gallery-thumb" onclick="switchProjectCardImage('maze', 2)" aria-label="View Unreal Engine 5 Viewport">
+                <img src="assets/images/portfolio/third-person-maze/maze-editor.jpg" alt="UE5 Viewport">
+              </button>
+            </div>
+          </div>
+
+          <div class="project-info-col">
+            <div class="project-meta-top">
+              <span class="project-category-badge">LEVEL DESIGN &bull; UNREAL ENGINE 5</span>
+              <span class="project-engine-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                UNREAL ENGINE 5
+              </span>
+            </div>
+
+            <h3 class="project-title">MAZE RUNNER</h3>
+
+            <p class="project-description">
+              An Unreal Engine 5 level-design prototype challenging players to navigate an expansive earth-toned maze from a third-person perspective. The level employs branching corridors and dead ends to test player spatial memory, orientation, and navigation.
+            </p>
+
+            <div class="project-highlights-list">
+              <span class="highlight-pill">Third-person gameplay</span>
+              <span class="highlight-pill">Branching paths &amp; dead ends</span>
+              <span class="highlight-pill">Spatial awareness</span>
+              <span class="highlight-pill">Graybox level design</span>
+              <span class="highlight-pill">Lighting integration</span>
+              <span class="highlight-pill">Character-camera placement</span>
+              <span class="highlight-pill">Blueprint development</span>
+            </div>
+
+            <div class="project-actions-row">
+              <button type="button" class="btn-view-project" onclick="openProjectModal('maze')">
+                <span>VIEW LEVEL STUDY</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+              <button type="button" class="btn-project-gallery" onclick="openLightbox('maze', 0)" aria-label="View Maze Runner Gallery">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                <span>GALLERY (3)</span>
+              </button>
+              <a href="https://drive.google.com/drive/folders/1zGgl4j7DXApgY53wCyXXkQ_auMhkfxrR?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-external-link" title="Open Google Drive Archive">
+                <span>ARCHIVE</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==================================================================
+             PROJECT 03: SNOWBOARD DASH (2D PHYSICS SIDE-SCROLLER)
+             ================================================================== -->
+        <article class="project-card-large" data-engine="unity" data-type="gameplay" id="card-project-scroller">
+          <div class="project-media-col" id="card-visual-scroller" data-active-index="0" onclick="handleCardImageClick('scroller')" tabindex="0" role="button" aria-label="Open Snowboard Dash gallery and case study">
+            <img src="assets/images/portfolio/2d-side-scroller/scroller-gameplay.jpg" alt="Snowboard Dash - Unity 2D Physics Side-Scroller" class="project-image" id="card-img-scroller" loading="lazy">
+            <div class="project-media-overlay" aria-hidden="true"></div>
+            <div class="project-gallery-badge" id="card-badge-scroller">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+              <span>1 / 3 &bull; GAMEPLAY</span>
+            </div>
+            <div class="project-quick-view-prompt">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              <span>FULLSCREEN &bull; CASE STUDY</span>
+            </div>
+            <div class="project-gallery-thumbs" id="card-thumbs-scroller" onclick="event.stopPropagation()">
+              <button type="button" class="project-gallery-thumb active" onclick="switchProjectCardImage('scroller', 0)" aria-label="View In-Flight Jump">
+                <img src="assets/images/portfolio/2d-side-scroller/scroller-gameplay.jpg" alt="Gameplay Jump">
+              </button>
+              <button type="button" class="project-gallery-thumb" onclick="switchProjectCardImage('scroller', 1)" aria-label="View Torque &amp; Balance Mechanics">
+                <img src="assets/images/portfolio/2d-side-scroller/scroller-mechanics.jpg" alt="Mechanics">
+              </button>
+              <button type="button" class="project-gallery-thumb" onclick="switchProjectCardImage('scroller', 2)" aria-label="View Start Screen &amp; UI">
+                <img src="assets/images/portfolio/2d-side-scroller/scroller-start.jpg" alt="Start Screen">
+              </button>
+            </div>
+          </div>
+
+          <div class="project-info-col">
+            <div class="project-meta-top">
+              <span class="project-category-badge">2D GAMEPLAY &bull; PHYSICS &bull; VFX</span>
+              <span class="project-engine-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12l-4-4v3H6v2h12v3l4-4z"/></svg>
+                UNITY
+              </span>
+            </div>
+
+            <h3 class="project-title">SNOWBOARD DASH</h3>
+
+            <p class="project-description">
+              A Unity-based 2D physics-driven side-scroller focused on fluid character movement and environmental interaction. Dynamic snow particle effects and layered physics colliders create responsive player feedback and tangible winter atmosphere.
+            </p>
+
+            <div class="project-highlights-list">
+              <span class="highlight-pill">Physics-driven mechanics</span>
+              <span class="highlight-pill">Character movement</span>
+              <span class="highlight-pill">Environmental interaction</span>
+              <span class="highlight-pill">Particle System</span>
+              <span class="highlight-pill">Dynamic snow effects</span>
+              <span class="highlight-pill">2D sprite management</span>
+              <span class="highlight-pill">Start menu &amp; UI states</span>
+            </div>
+
+            <div class="project-actions-row">
+              <button type="button" class="btn-view-project" onclick="openProjectModal('scroller')">
+                <span>VIEW CASE STUDY</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+              <button type="button" class="btn-project-gallery" onclick="openLightbox('scroller', 0)" aria-label="View Snowboard Dash Gallery">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                <span>GALLERY (3)</span>
+              </button>
+              <a href="https://drive.google.com/drive/folders/1zGgl4j7DXApgY53wCyXXkQ_auMhkfxrR?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-external-link" title="Open Google Drive Archive">
+                <span>ARCHIVE</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==================================================================
+             PROJECT 04: IMPERIAL HANGAR (CINEMATIC 3D ENVIRONMENT)
+             ================================================================== -->
+        <article class="project-card-large reverse" data-engine="unreal" data-type="cinematic" id="card-project-environment">
+          <div class="project-media-col" id="card-visual-environment" data-active-index="0" onclick="handleCardImageClick('environment')" tabindex="0" role="button" aria-label="Open Imperial Hangar gallery and case study">
+            <img src="assets/images/portfolio/cinematic-environment/cinematic-environment-final.jpg" alt="Imperial Hangar - Cinematic 3D Environment in UE5 &amp; Blender" class="project-image" id="card-img-environment" loading="lazy">
+            <div class="project-media-overlay" aria-hidden="true"></div>
+            <div class="project-gallery-badge" id="card-badge-environment">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+              <span>1 / 3 &bull; FINAL RENDER</span>
+            </div>
+            <div class="project-quick-view-prompt">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              <span>FULLSCREEN &bull; CINEMATIC PASS</span>
+            </div>
+            <div class="project-gallery-thumbs" id="card-thumbs-environment" onclick="event.stopPropagation()">
+              <button type="button" class="project-gallery-thumb active" onclick="switchProjectCardImage('environment', 0)" aria-label="View Hero Final Render">
+                <img src="assets/images/portfolio/cinematic-environment/cinematic-environment-final.jpg" alt="Final Render">
+              </button>
+              <button type="button" class="project-gallery-thumb" onclick="switchProjectCardImage('environment', 1)" aria-label="View Corridor Breakdown">
+                <img src="assets/images/portfolio/cinematic-environment/cinematic-corridor-breakdown.jpg" alt="Corridor Breakdown">
+              </button>
+              <button type="button" class="project-gallery-thumb" onclick="switchProjectCardImage('environment', 2)" aria-label="View Shrine Lighting Art">
+                <img src="assets/images/portfolio/cinematic-environment/cinematic-shrine-artwork.jpg" alt="Shrine Artwork">
+              </button>
+            </div>
+          </div>
+
+          <div class="project-info-col">
+            <div class="project-meta-top">
+              <span class="project-category-badge">LIGHTING &bull; VFX &bull; CINEMATIC PRESENTATION</span>
+              <span class="project-engine-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                UE5 &amp; BLENDER
+              </span>
+            </div>
+
+            <h3 class="project-title">IMPERIAL HANGAR</h3>
+
+            <p class="project-description">
+              A cinematic 3D environment and Star Wars tribute created in Unreal Engine 5 and Blender. Features suspended TIE fighters, stormtrooper formations, volumetric light shafts, and mechanical animation, transforming a static scene into a high-stakes imperial narrative moment.
+            </p>
+
+            <div class="project-highlights-list">
+              <span class="highlight-pill">Mechanical animation</span>
+              <span class="highlight-pill">Volumetric lighting</span>
+              <span class="highlight-pill">VFX &amp; atmosphere</span>
+              <span class="highlight-pill">Camera composition</span>
+              <span class="highlight-pill">Environmental storytelling</span>
+              <span class="highlight-pill">Final-pass development</span>
+            </div>
+
+            <div class="project-actions-row">
+              <button type="button" class="btn-view-project" onclick="openProjectModal('environment')">
+                <span>VIEW CASE STUDY</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+              <button type="button" class="btn-project-gallery" onclick="openLightbox('environment', 0)" aria-label="View Imperial Hangar Gallery">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                <span>GALLERY (3)</span>
+              </button>
+              <a href="https://drive.google.com/drive/folders/1zGgl4j7DXApgY53wCyXXkQ_auMhkfxrR?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-external-link" title="Open Google Drive Archive">
+                <span>ARCHIVE</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+        </article>

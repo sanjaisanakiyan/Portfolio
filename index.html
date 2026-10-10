@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanjai Sanakiyan | Game Designer & Artist | Portfolio</title>
+
+  <!-- SEO & Open Graph Meta Tags -->
+  <meta name="description"
+    content="Cinematic Game Designer and Artist portfolio of Sanjai Sanakiyan. Specializing in gameplay mechanics, level design, prototyping, Unity, Unreal Engine 5, Blender, and player experience.">
+  <meta name="keywords"
+    content="Sanjai Sanakiyan, Game Designer, Game Artist, Gameplay Mechanics, Level Design, Prototyping, Unity, Unreal Engine 5, Blender, C#, C++, Portfolio">
+  <meta name="author" content="Sanjai Sanakiyan">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sanjai Sanakiyan | Game Designer & Artist">
+  <meta property="og:description"
+    content="Cinematic Game Designer & Artist portfolio specializing in gameplay mechanics, level design, prototyping, Unity, and Unreal Engine 5.">
+  <meta property="og:image" content="assets/images/portfolio/hero/hero-cinematic.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sanjai Sanakiyan | Game Designer & Artist">
+  <meta name="twitter:description"
+    content="Cinematic Game Designer & Artist portfolio specializing in gameplay mechanics, level design, and prototyping.">
+  <meta name="twitter:image" content="assets/images/portfolio/hero/hero-cinematic.jpg">
+
+  <!-- Favicon Monogram -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%2308090c%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-weight=%22900%22 font-size=%2254%22 fill=%22%23f59e0b%22>S</text></svg>">
+
+  <!-- Google Fonts Preconnect & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- Ambient Interactive Background Canvas & Grid -->
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+  <div class="ambient-grid" aria-hidden="true"></div>
+  <div class="glow-orb top-left" aria-hidden="true"></div>
+  <div class="glow-orb bottom-right" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       SITE HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand" aria-label="Sanjai Sanakiyan Home">
+        <div class="brand-monogram">S</div>
+        <div class="brand-text">
+          <span class="brand-name">SANJAI SANAKIYAN</span>
+          <span class="brand-role">GAME DESIGNER &amp; ARTIST</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home" class="nav-link active" data-nav="home">HOME</a></li>
+          <li><a href="#about" class="nav-link" data-nav="about">ABOUT</a></li>
+          <li><a href="#methodology" class="nav-link" data-nav="methodology">METHODOLOGY</a></li>
+          <li><a href="#skills" class="nav-link" data-nav="skills">SKILLS</a></li>
+          <li><a href="#projects" class="nav-link" data-nav="projects">PROJECTS</a></li>
+          <li><a href="#experience" class="nav-link" data-nav="experience">EXPERIENCE</a></li>
+          <li><a href="#education" class="nav-link" data-nav="education">EDUCATION</a></li>
+          <li><a href="#contact" class="nav-link" data-nav="contact">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Controls -->
+      <div class="nav-actions">
+        <!-- Audio Feedback Toggle (Futuristic sci-fi UI sound synthesis) -->
+        <button type="button" class="btn-audio-toggle" id="btn-audio-toggle" title="Toggle UI Sound Effects"
+          aria-label="Toggle UI Sound Effects">
+          <svg id="icon-sound-off" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="1" y1="1" x2="23" y2="23"></line>
+            <path d="M9 9v3a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6"></path>
+            <path d="M17 16.95A7 7 0 0 1 5 12v-2m14 0v2a7 7 0 0 1-.11 1.23"></path>
+            <line x1="12" y1="19" x2="12" y2="23"></line>
+            <line x1="8" y1="23" x2="16" y2="23"></line>
+          </svg>
+          <svg id="icon-sound-on" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+        </button>
+
+        <a href="#contact" class="nav-cta-btn">LET'S CONNECT</a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle mobile menu"
+          aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO / HOME SECTION
+       ========================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="hero-backdrop" id="hero-backdrop" aria-hidden="true"></div>
+    <div class="hero-gradient-overlay" aria-hidden="true"></div>
+
+    <div class="container hero-content">
+      <div class="hero-status-badge">
+        <span class="status-pulse-dot" aria-hidden="true"></span>
+        <span>OPEN FOR GAME DESIGN &amp; DEVELOPMENT OPPORTUNITIES</span>
+      </div>
+
+      <h1 class="hero-name">SANJAI SANAKIYAN</h1>
+
+      <div class="hero-role-title">
+        <span>GAME DESIGNER &amp; ARTIST</span>
+        <span class="divider-line" aria-hidden="true"></span>
+      </div>
+
+      <p class="hero-supporting-text">
+        Gameplay &bull; Level Design &bull; Prototyping &bull; Player Experience &mdash; combining technical development
+        with visual storytelling to build memorable interactive worlds.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary-cinematic" id="hero-btn-work">
+          <span>VIEW MY WORK</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <a href="#contact" class="btn-secondary-cinematic" id="hero-btn-contact">
+          <span>CONTACT ME</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Engine & Tech Badges -->
+      <div class="hero-engine-pills">
+        <span class="pill-label">PRIMARY STACK:</span>
+        <span class="engine-pill">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M22 12l-4-4v3H6v2h12v3l4-4z" />
+          </svg>
+          Unity
+        </span>
+        <span class="engine-pill">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+          </svg>
+          Unreal Engine 5
+        </span>
+        <span class="engine-pill">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="8" />
+          </svg>
+          Blender
+        </span>
+        <span class="engine-pill">C# &amp; C++ Basics</span>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <a href="#about" class="hero-scroll-indicator" aria-label="Scroll down to about">
+      <span class="scroll-text">EXPLORE</span>
+      <div class="scroll-line-container">
+        <div class="scroll-line-bar"></div>
+      </div>
+    </a>
+  </section>
+
+  <!-- ==========================================================================
+       ABOUT SECTION (EDITORIAL ASYMMETRIC + METHODOLOGY)
+       ========================================================================== -->
+  <section class="introduction-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">PHILOSOPHY &amp; APPROACH</div>
+        <h2 class="section-title">"I DESIGN EXPERIENCES PLAYERS REMEMBER."</h2>
+        <p class="section-subtitle">
+          Analyzing player psychology, crafting tactile feedback, and orchestrating mechanics and level geometry into
+          seamless flow states.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left: Statement & Vision -->
+        <div class="about-bio-panel">
+          <div class="about-lead-quote">
+            "I am a passionate and creative aspiring Game Designer with a strong interest in gameplay mechanics, level
+            design, and player experience. I enjoy analyzing how games engage players and experimenting with new ideas
+            through prototyping."
+          </div>
+          <p class="about-body-text">
+            I am a quick learner with a collaborative mindset and enjoy developing creative solutions while gaining
+            practical experience in game development. From rapid grayboxing and physics tuning to lighting composition
+            and gameplay loops, my process bridges technical development with expressive visual storytelling.
+          </p>
+
+          <div class="about-highlights-row">
+            <div class="about-highlight-card">
+              <span class="card-metric">04</span>
+              <span class="card-caption">Core Design Projects Built &amp; Documented</span>
+            </div>
+            <div class="about-highlight-card">
+              <span class="card-metric">AAA</span>
+              <span class="card-caption">Studio-Standard Graybox &amp; Pipeline Mindset</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Professional Profile Card -->
+        <div class="profile-card-wrapper" id="profile-card-tilt">
+          <div class="profile-card">
+            <div class="profile-card-header">
+              <div class="profile-avatar-container">
+                <img src="assets/images/portfolio/about/sanjai-sanakiyan-avatar.png"
+                  alt="Sanjai Sanakiyan - Game Designer & Artist" class="profile-avatar-img">
+              </div>
+              <div class="profile-name-group">
+                <h3 class="card-title">SANJAI SANAKIYAN</h3>
+                <span class="card-subtitle">Game Designer &amp; Artist</span>
+              </div>
+            </div>
+
+            <div class="profile-specs-list">
+              <div class="profile-spec-item">
+                <span class="spec-label">Core Focus</span>
+                <span class="spec-value">Gameplay &bull; Level Design &bull; Prototyping &bull; Player Experience</span>
+              </div>
+
+              <div class="profile-spec-item">
+                <span class="spec-label">Game Engines</span>
+                <div class="spec-tags-cloud">
+                  <span class="spec-tag highlight">Unity</span>
+                  <span class="spec-tag highlight">Unreal Engine 5</span>
+                </div>
+              </div>
+
+              <div class="profile-spec-item">
+                <span class="spec-label">3D / Art &amp; Tech</span>
+                <div class="spec-tags-cloud">
+                  <span class="spec-tag">Blender</span>
+                  <span class="spec-tag">Lighting &amp; Volumetrics</span>
+                  <span class="spec-tag">Particle VFX</span>
+                  <span class="spec-tag">Camera Composition</span>
+                </div>
+              </div>
+
+              <div class="profile-spec-item">
+                <span class="spec-label">Programming</span>
+                <div class="spec-tags-cloud">
+                  <span class="spec-tag highlight">C#</span>
+                  <span class="spec-tag">C++ Basics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Design Methodology / 5-Step Pipeline -->
+      <div class="about-methodology-wrapper" id="methodology"
+        style="margin-top: 84px; padding-top: 64px; border-top: 1px solid var(--border-subtle);">
+        <div class="section-header center">
+          <div class="section-tag">METHODOLOGY</div>
+          <h2 class="section-title">HOW I DESIGN GAMES</h2>
+          <p class="section-subtitle">
+            A structured 5-step iterative pipeline prioritizing player feedback, rapid validation, and technical polish.
+          </p>
+        </div>
+
+        <div class="process-stepper-container">
+          <!-- Connecting Animated Track -->
+          <div class="process-track-line" aria-hidden="true">
+            <div class="process-track-glow"></div>
+          </div>
+
+          <!-- Step 01: IDEA -->
+          <div class="process-step-card" tabindex="0">
+            <div class="step-number-bubble">01</div>
+            <h3 class="step-title">IDEA</h3>
+            <p class="step-desc">
+              Define the gameplay concept, core fantasy, and player goal with clear constraints.
+            </p>
+          </div>
+
+          <!-- Step 02: PROTOTYPE -->
+          <div class="process-step-card" tabindex="0">
+            <div class="step-number-bubble">02</div>
+            <h3 class="step-title">PROTOTYPE</h3>
+            <p class="step-desc">
+              Rapidly test mechanics, vehicle/character physics, and inputs using whitebox geometry.
+            </p>
+          </div>
+
+          <!-- Step 03: BUILD -->
+          <div class="process-step-card" tabindex="0">
+            <div class="step-number-bubble">03</div>
+            <h3 class="step-title">BUILD</h3>
+            <p class="step-desc">
+              Develop gameplay systems, AI behaviors, environment layouts, UI, and state machines.
+            </p>
+          </div>
+
+          <!-- Step 04: TEST -->
+          <div class="process-step-card" tabindex="0">
+            <div class="step-number-bubble">04</div>
+            <h3 class="step-title">TEST</h3>
+            <p class="step-desc">
+              Playtest loops, identify player friction, debug edge cases, and refine the experience.
+            </p>
+          </div>
+
+          <!-- Step 05: POLISH -->
+          <div class="process-step-card" tabindex="0">
+            <div class="step-number-bubble">05</div>
+            <h3 class="step-title">POLISH</h3>
+            <p class="step-desc">
+              Improve lighting, VFX, camera work, tactile feedback, and overall presentation.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TECHNICAL TOOLKIT & SKILLS SECTION
+       ========================================================================== -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-tag cyan">TECHNICAL TOOLKIT</div>
+        <h2 class="section-title">PRACTICAL COMPETENCIES</h2>
+        <p class="section-subtitle">
+          Hands-on technical proficiency across modern game engines, programming languages, 3D pipelines, and design
+          methodologies.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="skills-filter-nav">
+        <button type="button" class="skill-tab-btn active" data-skill-filter="all">ALL SKILLS</button>
+        <button type="button" class="skill-tab-btn" data-skill-filter="engines">GAME ENGINES</button>
+        <button type="button" class="skill-tab-btn" data-skill-filter="design">GAME DESIGN</button>
+        <button type="button" class="skill-tab-btn" data-skill-filter="art">3D / ART</button>
+        <button type="button" class="skill-tab-btn" data-skill-filter="code">PROGRAMMING</button>
+      </div>
+
+      <!-- Skills Grid (No Fake Percentages - Authentic Capabilities) -->
+      <div class="skills-grid" id="skills-grid">
+
+        <!-- Category: Game Engines -->
+        <div class="skill-category-card" data-category="engines">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon cyan">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="skill-cat-title">GAME ENGINES</h3>
+          </div>
+          <ul class="skill-items-list">
+            <li class="skill-item">
+              <span class="skill-item-name">Unity</span>
+              <span class="skill-item-tag">2D/3D &bull; C# &bull; Physics</span>
+            </li>
+            <li class="skill-item">
+              <span class="skill-item-name">Unreal Engine 5</span>
+              <span class="skill-item-tag">Blueprints &bull; Graybox</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category: Game Design -->
+        <div class="skill-category-card" data-category="design">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+            </div>
+            <h3 class="skill-cat-title">GAME DESIGN</h3>
+          </div>
+          <ul class="skill-items-list">
+            <li class="skill-item">
+              <span class="skill-item-name">Gameplay Mechanics</span>
+              <span class="skill-item-tag">Feel &bull; Feedback</span>
+            </li>
+            <li class="skill-item">
+              <span class="skill-item-name">Level Design</span>
+              <span class="skill-item-tag">Flow &bull; Orientation</span>
+            </li>
+            <li class="skill-item">
+              <span class="skill-item-name">Player Experience</span>
+              <span class="skill-item-tag">Pacing &bull; Engagement</span>
+            </li>
+            <li class="skill-item">
+              <span class="skill-item-name">Game Prototyping</span>
+              <span class="skill-item-tag">Rapid Validation</span>
+            </li>
+            <li class="skill-item">
+              <span class="skill-item-name">Game Systems</span>
+              <span class="skill-item-tag">State Loops &bull; UI</span>
+            </li>
+            <li class="skill-item">
+              <span class="skill-item-name">Testing &amp; Iteration</span>
+              <span class="skill-item-tag">Balancing &bull; QA</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category: 3D / Art -->
+        <div class="skill-category-card" data-category="art">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon emerald">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path
+                  d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94">
+                </path>
+              </svg>
+            </div>
+            <h3 class="skill-cat-title">3D / ART</h3>
+          </div>
+          <ul class="skill-items-list">
+            <li class="skill-item">
+              <span class="skill-item-name">Blender</span>
+              <span class="skill-item-tag">3D Assets &bull; Animation</span>
+            </li>
+            <li class="skill-item">
+              <span class="skill-item-name">Environment Design</span>
+              <span class="skill-item-tag">Atmosphere &bull; Mood</span>
+            </li>
+            <li class="skill-item">
+              <span class="skill-item-name">Lighting</span>
+              <span class="skill-item-tag">Volumetrics &bull; Fog</span>
+            </li>
+            <li class="skill-item">
+              <span class="skill-item-name">VFX</span>
+              <span class="skill-item-tag">Particles &bull; Embers</span>
+            </li>
+            <li class="skill-item">
+              <span class="skill-item-name">Camera Composition</span>
+              <span class="skill-item-tag">Framing &bull; Angles</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category: Programming -->
+        <div class="skill-category-card" data-category="code">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon purple">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 class="skill-cat-title">PROGRAMMING</h3>
+          </div>
+          <ul class="skill-items-list">
+            <li class="skill-item">
+              <span class="skill-item-name">C#</span>
+              <span class="skill-item-tag">Unity Gameplay &bull; Logic</span>
+            </li>
+            <li class="skill-item">
+              <span class="skill-item-name">C++ Basics</span>
+              <span class="skill-item-tag">Core Fundamentals &bull; OOP</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURED PROJECTS SECTION (SELECTED WORK)
+       ========================================================================== -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-tag">PORTFOLIO SHOWCASE</div>
+        <h2 class="section-title">SELECTED WORK</h2>
+        <p class="section-subtitle">
+          Selected game development and design projects exploring gameplay, level design, technical systems, visual
+          effects, and player experience.
+        </p>
+      </div>
+
+      <!-- Project Filter Pills -->
+      <div class="projects-filter-bar">
+        <button type="button" class="project-filter-btn active" data-filter="all">ALL PROJECTS (04)</button>
+        <button type="button" class="project-filter-btn" data-filter="unity">UNITY</button>
+        <button type="button" class="project-filter-btn" data-filter="unreal">UNREAL ENGINE 5</button>
+        <button type="button" class="project-filter-btn" data-filter="level-design">LEVEL DESIGN</button>
+        <button type="button" class="project-filter-btn" data-filter="cinematic">3D ART &amp; VFX</button>
+      </div>
+
+      <!-- Project Cards Stack -->
+      <div class="projects-cards-stack">
+
+        <!-- ==================================================================
+             PROJECT 01: ARCADE DRIVING
+             ================================================================== -->
+        <article class="project-card-large" data-engine="unity" data-type="gameplay" id="card-project-driving">
+          <div class="project-media-col" onclick="openProjectModal('driving')" tabindex="0" role="button"
+            aria-label="Open Arcade Driving case study">
+            <img src="assets/images/portfolio/arcade-driving/driving-cover-cinematic.jpg"
+              alt="Arcade Driving - Unity Arcade Driving Prototype" class="project-image" loading="lazy">
+            <div class="project-media-overlay" aria-hidden="true"></div>
+            <div class="project-quick-view-prompt">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+              <span>EXPLORE CASE STUDY</span>
+            </div>
+          </div>
+
+          <div class="project-info-col">
+            <div class="project-meta-top">
+              <span class="project-category-badge">GAMEPLAY &bull; VEHICLE SYSTEMS &bull; AI</span>
+              <span class="project-engine-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M22 12l-4-4v3H6v2h12v3l4-4z" />
+                </svg>
+                UNITY
+              </span>
+            </div>
+
+            <h3 class="project-title">ARCADE DRIVING</h3>
+
+            <p class="project-description">
+              A Unity-based arcade driving prototype featuring responsive third-person vehicle controls in a city
+              traffic environment. Built with custom physics tuning, dynamic AI traffic behavior, garage-based car
+              selection, and structured state transitions.
+            </p>
+
+            <div class="project-highlights-list">
+              <span class="highlight-pill">Responsive vehicle controls</span>
+              <span class="highlight-pill">AI-driven traffic</span>
+              <span class="highlight-pill">Real-time collision detection</span>
+              <span class="highlight-pill">Garage-based car selection</span>
+              <span class="highlight-pill">Structured gameplay loop</span>
+              <span class="highlight-pill">Restart &amp; exit states</span>
+            </div>
+
+            <div class="project-actions-row">
+              <button type="button" class="btn-view-project" onclick="openProjectModal('driving')">
+                <span>VIEW CASE STUDY</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+              <a href="https://drive.google.com/drive/folders/1qHLftPa75w1miNfKX7r1I1uUfMXf8MWi?usp=sharing"
+                target="_blank" rel="noopener noreferrer" class="btn-external-link" title="View Project Archive"
+                aria-label="View Project Archive">
+                <span>VIEW PROJECT ARCHIVE</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==================================================================
+             PROJECT 02: THIRD-PERSON MAZE
+             ================================================================== -->
+        <article class="project-card-large reverse" data-engine="unreal" data-type="level-design"
+          id="card-project-maze">
+          <div class="project-media-col" onclick="openProjectModal('maze')" tabindex="0" role="button"
+            aria-label="Open Third-Person Maze case study">
+            <img src="assets/images/portfolio/third-person-maze/maze-cover-cinematic.jpg"
+              alt="Third-Person Maze - Unreal Engine 5 Level Design" class="project-image" loading="lazy">
+            <div class="project-media-overlay" aria-hidden="true"></div>
+            <div class="project-quick-view-prompt">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+              <span>EXPLORE LEVEL DESIGN</span>
+            </div>
+          </div>
+
+          <div class="project-info-col">
+            <div class="project-meta-top">
+              <span class="project-category-badge">LEVEL DESIGN &bull; UNREAL ENGINE 5</span>
+              <span class="project-engine-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                UNREAL ENGINE 5
+              </span>
+            </div>
+
+            <h3 class="project-title">THIRD-PERSON MAZE</h3>
+
+            <p class="project-description">
+              An Unreal Engine 5 third-person level-design prototype focused on navigating a complex maze environment
+              through branching paths, dead ends, spatial awareness, and environmental lighting integration.
+            </p>
+
+            <div class="project-highlights-list">
+              <span class="highlight-pill">Third-person gameplay</span>
+              <span class="highlight-pill">Branching paths &amp; dead ends</span>
+              <span class="highlight-pill">Spatial awareness</span>
+              <span class="highlight-pill">Graybox level design</span>
+              <span class="highlight-pill">Lighting integration</span>
+              <span class="highlight-pill">Character-camera placement</span>
+              <span class="highlight-pill">Blueprint development</span>
+            </div>
+
+            <div class="project-actions-row">
+              <button type="button" class="btn-view-project" onclick="openProjectModal('maze')">
+                <span>VIEW CASE STUDY</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+              <a href="https://drive.google.com/drive/folders/1gvHnf9RfiTiL2Uh77j3hLagwYHZ1gF3A?usp=drive_link"
+                target="_blank" rel="noopener noreferrer" class="btn-external-link" title="View Project Archive"
+                aria-label="View Project Archive">
+                <span>VIEW PROJECT ARCHIVE</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==================================================================
+             PROJECT 03: SNOWBALL FIGHT
+             ================================================================== -->
+        <article class="project-card-large" data-engine="unity" data-type="gameplay" id="card-project-scroller">
+          <div class="project-media-col" onclick="openProjectModal('scroller')" tabindex="0" role="button"
+            aria-label="Open Snowball Fight case study">
+            <img src="assets/images/snowball-cover-cinematic.jpg"
+              alt="Snowball Fight - 2D Winter Arena Combat Prototype" class="project-image" loading="lazy">
+            <div class="project-media-overlay" aria-hidden="true"></div>
+            <div class="project-quick-view-prompt">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+              <span>EXPLORE ARENA COMBAT</span>
+            </div>
+          </div>
+
+          <div class="project-info-col">
+            <div class="project-meta-top">
+              <span class="project-category-badge">2D GAMEPLAY &bull; COMBAT PHYSICS &bull; MULTIPLAYER</span>
+              <span class="project-engine-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M22 12l-4-4v3H6v2h12v3l4-4z" />
+                </svg>
+                UNITY
+              </span>
+            </div>
+
+            <h3 class="project-title">SNOWBALL FIGHT</h3>
+
+            <p class="project-description">
+              A Unity 6 2D local multiplayer arena combat prototype featuring physics-based snowball projectile
+              throwing,
+              precision platform navigation, candy-cane health tracking, and dynamic winter particle atmosphere.
+            </p>
+
+            <div class="project-highlights-list">
+              <span class="highlight-pill">Snowball projectile physics</span>
+              <span class="highlight-pill">2-Player arena combat</span>
+              <span class="highlight-pill">Target trajectory &amp; throw velocity</span>
+              <span class="highlight-pill">Tiered platform navigation</span>
+              <span class="highlight-pill">Candy-cane health HUD</span>
+              <span class="highlight-pill">Dynamic snowfall particle VFX</span>
+              <span class="highlight-pill">Start menu &amp; scene state loop</span>
+            </div>
+
+            <div class="project-actions-row">
+              <button type="button" class="btn-view-project" onclick="openProjectModal('scroller')">
+                <span>VIEW CASE STUDY</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+              <a href="https://drive.google.com/drive/folders/1QTZcfc8K9JQZpSMYd7RHCt46htROJFCq?usp=sharing"
+                target="_blank" rel="noopener noreferrer" class="btn-external-link" title="View Project Archive"
+                aria-label="View Project Archive">
+                <span>VIEW PROJECT ARCHIVE</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==================================================================
+             PROJECT 04: CINEMATIC 3D ENVIRONMENT
+             ================================================================== -->
+        <article class="project-card-large reverse" data-engine="unreal" data-type="cinematic"
+          id="card-project-environment">
+          <div class="project-media-col" onclick="openProjectModal('environment')" tabindex="0" role="button"
+            aria-label="Open Cinematic 3D Environment case study">
+            <img src="assets/images/portfolio/cinematic-environment/hangar-cover-cinematic.jpg"
+              alt="Cinematic 3D Environment - Futuristic Spacecraft Hangar in Unreal Engine 5 &amp; Blender"
+              class="project-image" loading="lazy">
+            <div class="project-media-overlay" aria-hidden="true"></div>
+            <div class="project-quick-view-prompt">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+              <span>EXPLORE CINEMATIC PASS</span>
+            </div>
+          </div>
+
+          <div class="project-info-col">
+            <div class="project-meta-top">
+              <span class="project-category-badge">LIGHTING &bull; VFX &bull; CINEMATIC PRESENTATION</span>
+              <span class="project-engine-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                UE5 &amp; BLENDER
+              </span>
+            </div>
+
+            <h3 class="project-title">CINEMATIC 3D ENVIRONMENT</h3>
+
+            <p class="project-description">
+              Environment Art Study: Futuristic spacecraft hangar environment created in Unreal Engine, exploring
+              industrial scale, symmetrical composition, atmospheric lighting, reflective surfaces, and cinematic
+              world-building.
+            </p>
+
+            <div class="project-highlights-list">
+              <span class="highlight-pill">Mechanical animation</span>
+              <span class="highlight-pill">Volumetric lighting</span>
+              <span class="highlight-pill">VFX &amp; atmosphere</span>
+              <span class="highlight-pill">Camera composition</span>
+              <span class="highlight-pill">Environmental storytelling</span>
+              <span class="highlight-pill">Final-pass development</span>
+            </div>
+
+            <div class="project-actions-row">
+              <button type="button" class="btn-view-project" onclick="openProjectModal('environment')">
+                <span>VIEW CASE STUDY</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+              <a href="https://drive.google.com/drive/folders/1zGgl4j7DXApgY53wCyXXkQ_auMhkfxrR?usp=drive_link"
+                target="_blank" rel="noopener noreferrer" class="btn-external-link" title="View Project Archive"
+                aria-label="View Project Archive">
+                <span>VIEW PROJECT ARCHIVE</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROFESSIONAL EXPERIENCE SECTION
+       ========================================================================== -->
+  <section class="experience-section" id="experience">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-tag cyan">INDUSTRY EXPOSURE</div>
+        <h2 class="section-title">PROFESSIONAL EXPERIENCE</h2>
+        <p class="section-subtitle">
+          Demonstrated practical industry experience supporting game development initiatives, debugging, optimization,
+          and team collaboration.
+        </p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <div class="timeline-spine" aria-hidden="true"></div>
+
+        <!-- Experience Entry: Pearl Lemon Limited -->
+        <div class="timeline-entry">
+          <div class="timeline-node" aria-hidden="true"></div>
+
+          <a href="assets/experience-letter.pdf" target="_blank" rel="noopener noreferrer" class="timeline-card-link"
+            aria-label="View Experience Letter - Pearl Lemon Limited Game Development Internship">
+            <div class="timeline-card">
+              <div class="experience-header-meta">
+                <div>
+                  <h3 class="experience-role-title">Game Development Intern</h3>
+                  <div class="experience-company">
+                    <span>Pearl Lemon Limited &mdash; UK | Remote</span>
+                    <span class="experience-badge-verified">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                      </svg>
+                      VERIFIED INTERNSHIP
+                    </span>
+                  </div>
+                </div>
+
+                <div class="experience-date-badge">
+                  MARCH 2026 &mdash; APRIL 2026
+                </div>
+              </div>
+
+              <p class="experience-overview">
+                "Worked as a Game Development Intern supporting game development initiatives across multiple projects."
+              </p>
+
+              <ul class="experience-responsibilities">
+                <li>Assisted with game design and development processes</li>
+                <li>Contributed to coding and debugging tasks</li>
+                <li>Worked on gameplay mechanics</li>
+                <li>Supported testing and optimization</li>
+                <li>Collaborated with the development team</li>
+                <li>Helped align development work with project goals and technical requirements</li>
+                <li>Adapted to feedback and changing project requirements</li>
+              </ul>
+
+              <div class="experience-card-footer">
+                <div class="experience-tags-container">
+                  <span class="experience-tag-pill">GAME DESIGN</span>
+                  <span class="experience-tag-pill">GAME DEVELOPMENT</span>
+                  <span class="experience-tag-pill">GAMEPLAY</span>
+                  <span class="experience-tag-pill">DEBUGGING</span>
+                  <span class="experience-tag-pill">TESTING</span>
+                  <span class="experience-tag-pill">OPTIMIZATION</span>
+                  <span class="experience-tag-pill">TEAM COLLABORATION</span>
+                </div>
+
+                <div class="experience-view-prompt" aria-hidden="true">
+                  <span>VIEW EXPERIENCE LETTER</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       EDUCATION SECTION
+       ========================================================================== -->
+  <section class="education-section" id="education">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag cyan">ACADEMIC FOUNDATION</div>
+        <h2 class="section-title">EDUCATION &amp; SPECIALIZATION</h2>
+        <p class="section-subtitle">
+          Rigorous engineering background with dedicated specialization in gaming systems and interactive technology.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Education Card -->
+        <div class="profile-card">
+          <div class="profile-card-header">
+            <div class="profile-avatar-symbol" aria-hidden="true" style="color:var(--accent-cyan);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <div class="profile-name-group">
+              <h3 class="card-title">SRM INSTITUTE OF SCIENCE AND TECHNOLOGY</h3>
+              <span class="card-subtitle">2021 &mdash; 2025</span>
+            </div>
+          </div>
+
+          <div class="profile-specs-list">
+            <div class="profile-spec-item">
+              <span class="spec-label">Degree</span>
+              <span class="spec-value">Bachelor of Technology in Computer Science Engineering</span>
+            </div>
+
+            <div class="profile-spec-item">
+              <span class="spec-label">Specialization</span>
+              <span class="spec-value" style="color:var(--accent-amber);">Gaming Technology</span>
+            </div>
+
+            <div class="profile-spec-item">
+              <span class="spec-label">Key Core Competencies</span>
+              <div class="spec-tags-cloud">
+                <span class="spec-tag highlight">Game Engine Architecture</span>
+                <span class="spec-tag highlight">3D Computer Graphics</span>
+                <span class="spec-tag">Physics Simulation</span>
+                <span class="spec-tag">Data Structures &amp; OOP</span>
+                <span class="spec-tag">Interactive Media</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Design Philosophy Banner -->
+        <div class="about-bio-panel">
+          <div class="about-lead-quote">
+            "GOOD GAME DESIGN IS ABOUT THE EXPERIENCE."
+          </div>
+          <p class="about-body-text">
+            "I am interested in understanding why players engage with a game, how mechanics communicate with players,
+            and how level design, visual feedback, and interaction can work together to create memorable experiences."
+          </p>
+          <p class="about-body-text">
+            Whether engineering an arcade vehicle collision response or orchestrating volumetric lighting in a sci-fi
+            environment, every creative choice is measured by how it elevates player immersion.
+          </p>
+
+          <div class="project-actions-row" style="margin-top: 12px;">
+            <a href="https://drive.google.com/drive/folders/1hACHV7x8eT5Bk8Hb8FWH9l03WzLV9dw-?usp=sharing"
+              target="_blank" rel="noopener noreferrer" class="btn-secondary-cinematic">
+              <span>EXPLORE PROJECTS</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT SECTION (CTA)
+       ========================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-card-main">
+
+        <!-- Left: Call to Action Details -->
+        <div class="contact-left-col">
+          <div class="section-tag">GET IN TOUCH</div>
+          <h2 class="contact-heading">LET'S BUILD SOMETHING PLAYABLE.</h2>
+          <p class="contact-text">
+            Interested in game design, interactive experiences, or game development? I'd love to connect regarding
+            full-time roles, junior game designer positions, or game development opportunities.
+          </p>
+
+          <div class="contact-cta-buttons">
+            <a href="mailto:sanjaisanakiyan007@gmail.com" class="btn-primary-cinematic" id="btn-email-me">
+              <span>EMAIL ME</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </a>
+
+            <button type="button" class="btn-secondary-cinematic" id="btn-copy-email" onclick="copyEmailToClipboard()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>COPY EMAIL</span>
+            </button>
+          </div>
+
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <span class="contact-info-value">sanjaisanakiyan007@gmail.com</span>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                  </path>
+                </svg>
+              </div>
+              <span class="contact-info-value">India / Remote &bull; Open to Worldwide Relocation</span>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </div>
+              <a href="https://drive.google.com/drive/folders/1zGgl4j7DXApgY53wCyXXkQ_auMhkfxrR?usp=drive_link"
+                target="_blank" rel="noopener noreferrer" class="contact-info-value"
+                style="text-decoration: underline;">
+                EXPLORE PROJECTS &nearr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Direct Message Composer -->
+        <div class="contact-right-form">
+          <h3 class="form-title">DIRECT INQUIRY</h3>
+          <form id="contact-form" onsubmit="handleContactSubmit(event)">
+            <div class="form-group">
+              <label for="contact-name" class="form-label">YOUR NAME</label>
+              <input type="text" id="contact-name" class="form-input"
+                placeholder="Studio Director / Recruiter / Collaborator" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">YOUR EMAIL</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="name@gamestudio.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject" class="form-label">PROJECT / ROLE</label>
+              <input type="text" id="contact-subject" class="form-input"
+                placeholder="Game Designer Opportunity / Level Design" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">MESSAGE</label>
+              <textarea id="contact-message" class="form-textarea"
+                placeholder="Hello Sanjai, we reviewed your arcade prototype and level design work..."
+                required></textarea>
+            </div>
+
+            <button type="submit" class="btn-send-message">
+              <span>SEND INQUIRY VIA EMAIL</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="f-name">SANJAI SANAKIYAN</div>
+          <div class="f-role">GAME DESIGNER &amp; ARTIST</div>
+        </div>
+
+        <ul class="footer-nav">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#methodology">METHODOLOGY</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#experience">EXPERIENCE</a></li>
+          <li><a href="#education">EDUCATION</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          &copy; <span id="current-year">2026</span> Sanjai Sanakiyan. All rights reserved.
+        </div>
+        <div class="footer-statement">
+          Crafted for Game Design, Technical Art &amp; Player Experience
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL CASE STUDY VIEWER (REUSABLE STUDIO DEEP-DIVE COMPONENT)
+       ========================================================================== -->
+  <div class="modal-overlay" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="modal-project-title">
+    <div class="modal-container" id="modal-container">
+
+      <!-- Close Button -->
+      <button type="button" class="modal-close-btn" id="modal-close-btn" onclick="closeProjectModal()"
+        aria-label="Close modal window">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Modal Hero Banner -->
+      <div class="modal-hero-banner">
+        <img src="" alt="" id="modal-hero-image" class="modal-hero-image">
+        <div class="modal-hero-gradient" aria-hidden="true"></div>
+        <div class="modal-hero-content">
+          <div class="modal-project-category" id="modal-project-category">CATEGORY</div>
+          <h2 class="modal-project-title" id="modal-project-title">PROJECT TITLE</h2>
+          <div class="modal-meta-specs-bar" id="modal-meta-specs-bar">
+            <!-- Populated via JavaScript -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs Inside Modal -->
+      <div class="modal-tabs-header" id="modal-tabs-header">
+        <button type="button" class="modal-tab-trigger active" data-modal-tab="overview">OVERVIEW &amp; ROLE</button>
+        <button type="button" class="modal-tab-trigger" data-modal-tab="systems">KEY SYSTEMS &amp; MECHANICS</button>
+        <button type="button" class="modal-tab-trigger" data-modal-tab="casestudy">DEEP DIVE &amp; ITERATION</button>
+        <button type="button" class="modal-tab-trigger" data-modal-tab="gallery">PROJECT GALLERY</button>
+        <button type="button" class="modal-tab-trigger" data-modal-tab="learnings">WHAT I LEARNED</button>
+      </div>
+
+      <!-- Modal Content Body -->
+      <div class="modal-body-content" id="modal-body-content">
+        <!-- Injected via JavaScript based on active project & tab -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       CINEMA-GRADE FULLSCREEN LIGHTBOX VIEWER
+       ========================================================================== -->
+  <div class="lightbox-overlay" id="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox-backdrop"></div>
+
+    <div class="lightbox-container">
+      <div class="lightbox-header">
+        <div class="lightbox-title-group">
+          <span class="lightbox-tag" id="lightbox-tag">GALLERY VIEW</span>
+          <h4 class="lightbox-project-title" id="lightbox-project-title">PROJECT TITLE</h4>
+        </div>
+        <div class="lightbox-header-actions">
+          <span class="lightbox-counter" id="lightbox-counter">1 / 4</span>
+          <button type="button" class="lightbox-close-btn" onclick="closeLightbox()" aria-label="Close Lightbox">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="lightbox-stage">
+        <button type="button" class="lightbox-nav-btn prev" onclick="navigateLightbox(-1)" aria-label="Previous image">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="lightbox-image-wrapper">
+          <img src="" alt="" id="lightbox-image" class="lightbox-image">
+        </div>
+
+        <button type="button" class="lightbox-nav-btn next" onclick="navigateLightbox(1)" aria-label="Next image">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <div class="lightbox-footer">
+        <p class="lightbox-caption" id="lightbox-caption">Image description</p>
+        <div class="lightbox-thumbnails-strip" id="lightbox-thumbnails">
+          <!-- Populated dynamically via JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Feedback Container -->
+  <div class="toast-notice" id="toast-notice" role="alert" aria-live="polite">
+    <span class="toast-dot" aria-hidden="true"></span>
+    <span id="toast-message">Email address copied to clipboard!</span>
+  </div>
+
+  <!-- Gaming HUD Cursor -->
+  <div id="game-cursor" class="is-hidden" aria-hidden="true">
+    <div class="cursor-ring"></div>
+    <div class="cursor-dot"></div>
+
+    <div class="cursor-arm cursor-top"></div>
+    <div class="cursor-arm cursor-bottom"></div>
+    <div class="cursor-arm cursor-left"></div>
+    <div class="cursor-arm cursor-right"></div>
+
+    <div class="cursor-label"></div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

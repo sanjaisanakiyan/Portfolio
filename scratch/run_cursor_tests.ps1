@@ -1,0 +1,150 @@
+$testRunnerHtml = @'
+<!DOCTYPE html>
+<html>
+<head><title>Cursor Test</title></head>
+<body>
+<iframe id="test-frame" src="http://localhost:5500/" width="1280" height="900"></iframe>
+<script>
+window.addEventListener('load', () => {
+  const iframe = document.getElementById('test-frame');
+  iframe.onload = () => {
+    setTimeout(runTests, 500);
+  };
+});
+
+function runTests() {
+  const iframe = document.getElementById('test-frame');
+  const doc = iframe.contentDocument;
+  const win = iframe.contentWindow;
+  const results = [];
+
+  function assert(condition, message) {
+    results.push({ pass: !!condition, message });
+    console.log((condition ? 'PASS: ' : 'FAIL: ') + message);
+  }
+
+  try {
+    const cursor = doc.getElementById('gaming-cursor');
+    assert(cursor !== null, 'gaming-cursor element exists');
+
+    const dot = cursor.querySelector('.crosshair-center-dot');
+    assert(dot !== null, 'center dot exists');
+
+    const arms = cursor.querySelectorAll('.crosshair-arms .arm');
+    assert(arms.length === 4, '4 crosshair arms exist');
+
+    const brackets = cursor.querySelectorAll('.crosshair-brackets .bracket');
+    assert(brackets.length === 4, '4 corner brackets exist');
+
+    const ring = cursor.querySelector('.crosshair-ring');
+    assert(ring !== null, 'outer ring exists');
+
+    const pulseRing = cursor.querySelector('.crosshair-pulse-ring');
+    assert(pulseRing !== null, 'pulse shockwave ring exists');
+
+    const labelText = cursor.querySelector('#crosshair-label-text');
+    assert(labelText !== null, 'label text element exists');
+
+    // Test 1: mousemove activates cursor and hides native pointer
+    win.dispatchEvent(new MouseEvent('mousemove', { clientX: 450, clientY: 250, bubbles: true }));
+    assert(doc.documentElement.classList.contains('has-gaming-cursor'), 'html has class has-gaming-cursor');
+    assert(doc.body.classList.contains('has-gaming-cursor'), 'body has class has-gaming-cursor');
+    assert(!cursor.classList.contains('is-hidden'), 'cursor is not hidden on mousemove');
+
+    // Check computed cursor styles
+    const bodyCursor = win.getComputedStyle(doc.body).cursor;
+    assert(bodyCursor === 'none', 'body computed cursor is none (got: ' + bodyCursor + ')');
+
+    const h1 = doc.querySelector('h1');
+    if (h1) {
+      const h1Cursor = win.getComputedStyle(h1).cursor;
+      assert(h1Cursor === 'none', 'h1 computed cursor is none (got: ' + h1Cursor + ')');
+    }
+
+    const btn = doc.querySelector('button');
+    if (btn) {
+      const btnCursor = win.getComputedStyle(btn).cursor;
+      assert(btnCursor === 'none', 'button computed cursor is none (got: ' + btnCursor + ')');
+    }
+
+    const input = doc.querySelector('input');
+    if (input) {
+      const inputCursor = win.getComputedStyle(input).cursor;
+      assert(inputCursor === 'text', 'input computed cursor is text (got: ' + inputCursor + ')');
+    }
+
+    // Test 2: Project card hover
+    const projectCard = doc.querySelector('.project-card-large');
+    if (projectCard) {
+      projectCard.dispatchEvent(new MouseEvent('mouseover', { bubbles: true }));
+      assert(cursor.classList.contains('state-project'), 'project card hover sets state-project');
+      assert(labelText.textContent === 'TARGET', 'project card label is TARGET (got: ' + labelText.textContent + ')');
+    }
+
+    // Test 3: Case study button hover
+    const caseBtn = doc.querySelector('.btn-view-project');
+    if (caseBtn) {
+      caseBtn.dispatchEvent(new MouseEvent('mouseover', { bubbles: true }));
+      assert(cursor.classList.contains('state-case'), 'case button hover sets state-case');
+      assert(labelText.textContent === 'OPEN CASE', 'case button label is OPEN CASE (got: ' + labelText.textContent + ')');
+    }
+
+    // Test 4: External Drive link hover
+    const driveLink = doc.querySelector('.btn-external-link');
+    if (driveLink) {
+      driveLink.dispatchEvent(new MouseEvent('mouseover', { bubbles: true }));
+      assert(cursor.classList.contains('state-button'), 'external link hover sets state-button');
+      assert(labelText.textContent === 'EXPLORE ↗', 'archive link label is EXPLORE ↗ (got: ' + labelText.textContent + ')');
+    }
+
+    // Test 5: Navigation link hover
+    const navLink = doc.querySelector('.nav-link');
+    if (navLink) {
+      navLink.dispatchEvent(new MouseEvent('mouseover', { bubbles: true }));
+      assert(cursor.classList.contains('state-button'), 'nav link hover sets state-button');
+    }
+
+    // Test 6: Form input hover
+    if (input) {
+      input.dispatchEvent(new MouseEvent('mouseover', { bubbles: true }));
+      assert(cursor.classList.contains('state-input'), 'input hover sets state-input');
+    }
+
+    // Test 7: Click animation
+    win.dispatchEvent(new MouseEvent('mousedown', { button: 0, bubbles: true }));
+    assert(cursor.classList.contains('is-clicking'), 'mousedown sets is-clicking state');
+
+    // Write results to DOM for inspection
+    const div = document.createElement('div');
+    div.id = 'test-summary';
+    const passed = results.filter(r => r.pass).length;
+    div.textContent = JSON.stringify({ total: results.length, passed, failed: results.length - passed, results });
+    document.body.appendChild(div);
+
+  } catch (err) {
+    const div = document.createElement('div');
+    div.id = 'test-summary';
+    div.textContent = JSON.stringify({ error: err.message, stack: err.stack });
+    document.body.appendChild(div);
+  }
+}
+</script>
+</body>
+</html>
+'@
+
+[System.IO.File]::WriteAllText("test_harness.html", $testRunnerHtml, [System.Text.Encoding]::UTF8)
+
+# Run Chrome headless to execute the test harness
+$chrome = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+$proc = Start-Process -FilePath $chrome -ArgumentList "--headless=new", "--disable-gpu", "--virtual-time-budget=5000", "--dump-dom", "http://localhost:5500/test_harness.html" -NoNewWindow -PassThru -RedirectStandardOutput "scratch\test_results.txt" -RedirectStandardError "scratch\test_err.txt"
+$proc.WaitForExit(10000)
+
+$res = Get-Content "scratch\test_results.txt" -Raw
+if ($res -match '<div id="test-summary">(.*?)</div>') {
+    $json = $matches[1]
+    Write-Host "TEST RESULTS:"
+    Write-Host $json
+} else {
+    Write-Host "Could not find test-summary div. Raw output length:" $res.Length
+}

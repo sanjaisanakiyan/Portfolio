@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html class="has-gaming-cursor"><head>
+  <base href="http://localhost:5500/">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="has-gaming-cursor">
+  <div id="test-output" data-res="{&quot;sheets&quot;:[{&quot;href&quot;:&quot;http://localhost:5500/assets/css/style.css&quot;,&quot;rules&quot;:308}],&quot;bodyClass&quot;:&quot;has-gaming-cursor&quot;,&quot;htmlClass&quot;:&quot;has-gaming-cursor&quot;,&quot;bodyCursor&quot;:&quot;none&quot;}"></div>
+  <script>
+    document.documentElement.classList.add('has-gaming-cursor');
+    window.addEventListener('load', () => {
+      const sheets = Array.from(document.styleSheets).map(s => {
+        try {
+          return { href: s.href, rules: s.cssRules.length };
+        } catch(e) {
+          return { href: s.href, error: e.message };
+        }
+      });
+      const cs = window.getComputedStyle(document.body);
+      const out = {
+        sheets,
+        bodyClass: document.body.className,
+        htmlClass: document.documentElement.className,
+        bodyCursor: cs.cursor
+      };
+      document.getElementById('test-output').setAttribute('data-res', JSON.stringify(out));
+    });
+  </script>
+
+
+</body></html>

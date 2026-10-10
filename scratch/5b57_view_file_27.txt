@@ -1,0 +1,259 @@
+﻿Created At: 2026-09-26T13:26:55+05:30
+Completed At: 2026-09-26T13:26:55+05:30
+File Path: `file:///c:/Users/ADMIN/Downloads/Portfolio/index.html`
+Total Lines: 1018
+Total Bytes: 53687
+Showing lines 351 to 600
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+351:               </svg>
+352:             </div>
+353:             <h3 class="skill-cat-title">3D / ART</h3>
+354:           </div>
+355:           <ul class="skill-items-list">
+356:             <li class="skill-item">
+357:               <span class="skill-item-name">Blender</span>
+358:               <span class="skill-item-tag">3D Assets &bull; Animation</span>
+359:             </li>
+360:             <li class="skill-item">
+361:               <span class="skill-item-name">Environment Design</span>
+362:               <span class="skill-item-tag">Atmosphere &bull; Mood</span>
+363:             </li>
+364:             <li class="skill-item">
+365:               <span class="skill-item-name">Lighting</span>
+366:               <span class="skill-item-tag">Volumetrics &bull; Fog</span>
+367:             </li>
+368:             <li class="skill-item">
+369:               <span class="skill-item-name">VFX</span>
+370:               <span class="skill-item-tag">Particles &bull; Embers</span>
+371:             </li>
+372:             <li class="skill-item">
+373:               <span class="skill-item-name">Camera Composition</span>
+374:               <span class="skill-item-tag">Framing &bull; Angles</span>
+375:             </li>
+376:           </ul>
+377:         </div>
+378: 
+379:         <!-- Category: Programming -->
+380:         <div class="skill-category-card" data-category="code">
+381:           <div class="skill-cat-header">
+382:             <div class="skill-cat-icon purple">
+383:               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+384:                 <polyline points="16 18 22 12 16 6"></polyline>
+385:                 <polyline points="8 6 2 12 8 18"></polyline>
+386:               </svg>
+387:             </div>
+388:             <h3 class="skill-cat-title">PROGRAMMING</h3>
+389:           </div>
+390:           <ul class="skill-items-list">
+391:             <li class="skill-item">
+392:               <span class="skill-item-name">C#</span>
+393:               <span class="skill-item-tag">Unity Gameplay &bull; Logic</span>
+394:             </li>
+395:             <li class="skill-item">
+396:               <span class="skill-item-name">C++ Basics</span>
+397:               <span class="skill-item-tag">Core Fundamentals &bull; OOP</span>
+398:             </li>
+399:           </ul>
+400:         </div>
+401: 
+402:       </div>
+403:     </div>
+404:   </section>
+405: 
+406:   <!-- ==========================================================================
+407:        FEATURED PROJECTS SECTION (SELECTED WORK)
+408:        ========================================================================== -->
+409:   <section class="projects-section" id="work">
+410:     <div class="container">
+411:       <div class="section-header center">
+412:         <div class="section-tag">PORTFOLIO SHOWCASE</div>
+413:         <h2 class="section-title">SELECTED WORK</h2>
+414:         <p class="section-subtitle">
+415:           Selected game development and design projects exploring gameplay, level design, technical systems, visual effects, and player experience.
+416:         </p>
+417:       </div>
+418: 
+419:       <!-- Project Filter Pills -->
+420:       <div class="projects-filter-bar">
+421:         <button type="button" class="project-filter-btn active" data-filter="all">ALL PROJECTS (04)</button>
+422:         <button type="button" class="project-filter-btn" data-filter="unity">UNITY</button>
+423:         <button type="button" class="project-filter-btn" data-filter="unreal">UNREAL ENGINE 5</button>
+424:         <button type="button" class="project-filter-btn" data-filter="level-design">LEVEL DESIGN</button>
+425:         <button type="button" class="project-filter-btn" data-filter="cinematic">3D ART &amp; VFX</button>
+426:       </div>
+427: 
+428:       <!-- Project Cards Stack -->
+429:       <div class="projects-cards-stack">
+430: 
+431:         <!-- ==================================================================
+432:              PROJECT 01: ARCADE DRIVING PROTOTYPE
+433:              ================================================================== -->
+434:         <article class="project-card-large" data-engine="unity" data-type="gameplay" id="card-project-driving">
+435:           <div class="project-media-col" onclick="openProjectModal('driving')" tabindex="0" role="button" aria-label="Open Arcade Driving Prototype case study">
+436:             <img src="assets/images/project-driving.jpg" alt="Arcade Driving Prototype in Unity with AI traffic and vehicle controls" class="project-image" loading="lazy">
+437:             <div class="project-media-overlay" aria-hidden="true"></div>
+438:             <div class="project-quick-view-prompt">
+439:               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+440:               <span>EXPLORE CASE STUDY</span>
+441:             </div>
+442:           </div>
+443: 
+444:           <div class="project-info-col">
+445:             <div class="project-meta-top">
+446:               <span class="project-category-badge">GAMEPLAY &bull; VEHICLE SYSTEMS &bull; AI</span>
+447:               <span class="project-engine-badge">
+448:                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12l-4-4v3H6v2h12v3l4-4z"/></svg>
+449:                 UNITY
+450:               </span>
+451:             </div>
+452: 
+453:             <h3 class="project-title">ARCADE DRIVING PROTOTYPE</h3>
+454: 
+455:             <p class="project-description">
+456:               An Unity-based arcade driving prototype featuring responsive third-person vehicle controls in a city traffic environment. Built with custom physics tuning, dynamic AI traffic behavior, and structured state transitions.
+457:             </p>
+458: 
+459:             <div class="project-highlights-list">
+460:               <span class="highlight-pill">Responsive vehicle controls</span>
+461:               <span class="highlight-pill">AI-driven traffic</span>
+462:               <span class="highlight-pill">Real-time collision detection</span>
+463:               <span class="highlight-pill">Garage-based car selection</span>
+464:               <span class="highlight-pill">Structured gameplay loop</span>
+465:               <span class="highlight-pill">Restart &amp; exit states</span>
+466:             </div>
+467: 
+468:             <div class="project-actions-row">
+469:               <button type="button" class="btn-view-project" onclick="openProjectModal('driving')">
+470:                 <span>VIEW CASE STUDY</span>
+471:                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+472:               </button>
+473:               <a href="https://drive.google.com/drive/folders/1zGgl4j7DXApgY53wCyXXkQ_auMhkfxrR?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-external-link">
+474:                 <span>PROJECT ARCHIVE</span>
+475:                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+476:               </a>
+477:             </div>
+478:           </div>
+479:         </article>
+480: 
+481:         <!-- ==================================================================
+482:              PROJECT 02: THIRD-PERSON MAZE / LEVEL DESIGN
+483:              ================================================================== -->
+484:         <article class="project-card-large reverse" data-engine="unreal" data-type="level-design" id="card-project-maze">
+485:           <div class="project-media-col" onclick="openProjectModal('maze')" tabindex="0" role="button" aria-label="Open Third-Person Maze case study">
+486:             <img src="assets/images/project-maze.jpg" alt="Unreal Engine 5 Third-Person Maze level design prototype" class="project-image" loading="lazy">
+487:             <div class="project-media-overlay" aria-hidden="true"></div>
+488:             <div class="project-quick-view-prompt">
+489:               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+490:               <span>EXPLORE LEVEL DESIGN</span>
+491:             </div>
+492:           </div>
+493: 
+494:           <div class="project-info-col">
+495:             <div class="project-meta-top">
+496:               <span class="project-category-badge">LEVEL DESIGN &bull; UNREAL ENGINE 5</span>
+497:               <span class="project-engine-badge">
+498:                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+499:                 UNREAL ENGINE 5
+500:               </span>
+501:             </div>
+502: 
+503:             <h3 class="project-title">THIRD-PERSON MAZE</h3>
+504: 
+505:             <p class="project-description">
+506:               An Unreal Engine 5 level-design prototype challenging players to navigate a complex earth-toned maze from a third-person perspective. The level uses branching paths and dead ends to challenge player memory, orientation, and spatial awareness.
+507:             </p>
+508: 
+509:             <div class="project-highlights-list">
+510:               <span class="highlight-pill">Third-person gameplay</span>
+511:               <span class="highlight-pill">Branching paths &amp; dead ends</span>
+512:               <span class="highlight-pill">Spatial awareness</span>
+513:               <span class="highlight-pill">Graybox level design</span>
+514:               <span class="highlight-pill">Lighting integration</span>
+515:               <span class="highlight-pill">Character-camera placement</span>
+516:               <span class="highlight-pill">Blueprint development</span>
+517:             </div>
+518: 
+519:             <div class="project-actions-row">
+520:               <button type="button" class="btn-view-project" onclick="openProjectModal('maze')">
+521:                 <span>VIEW LEVEL STUDY</span>
+522:                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+523:               </button>
+524:               <a href="https://drive.google.com/drive/folders/1zGgl4j7DXApgY53wCyXXkQ_auMhkfxrR?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-external-link">
+525:                 <span>PROJECT ARCHIVE</span>
+526:                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+527:               </a>
+528:             </div>
+529:           </div>
+530:         </article>
+531: 
+532:         <!-- ==================================================================
+533:              PROJECT 03: 2D PHYSICS SIDE-SCROLLER
+534:              ================================================================== -->
+535:         <article class="project-card-large" data-engine="unity" data-type="gameplay" id="card-project-scroller">
+536:           <div class="project-media-col" onclick="openProjectModal('scroller')" tabindex="0" role="button" aria-label="Open 2D Physics Side-Scroller case study">
+537:             <img src="assets/images/project-scroller.jpg" alt="Unity 2D Physics Side-Scroller with dynamic snow particle VFX" class="project-image" loading="lazy">
+538:             <div class="project-media-overlay" aria-hidden="true"></div>
+539:             <div class="project-quick-view-prompt">
+540:               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+541:               <span>EXPLORE PHYSICS &amp; VFX</span>
+542:             </div>
+543:           </div>
+544: 
+545:           <div class="project-info-col">
+546:             <div class="project-meta-top">
+547:               <span class="project-category-badge">2D GAMEPLAY &bull; PHYSICS &bull; VFX</span>
+548:               <span class="project-engine-badge">
+549:                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12l-4-4v3H6v2h12v3l4-4z"/></svg>
+550:                 UNITY
+551:               </span>
+552:             </div>
+553: 
+554:             <h3 class="project-title">2D PHYSICS SIDE-SCROLLER</h3>
+555: 
+556:             <p class="project-description">
+557:               An Unity-based 2D physics-driven side-scroller focused on fluid character movement and environmental interaction. Dynamic snow particle effects and layered physics colliders create responsive player feedback and tangible atmosphere.
+558:             </p>
+559: 
+560:             <div class="project-highlights-list">
+561:               <span class="highlight-pill">Physics-driven mechanics</span>
+562:               <span class="highlight-pill">Character movement</span>
+563:               <span class="highlight-pill">Environmental interaction</span>
+564:               <span class="highlight-pill">Particle System</span>
+565:               <span class="highlight-pill">Dynamic snow effects</span>
+566:               <span class="highlight-pill">2D sprite management</span>
+567:               <span class="highlight-pill">Start menu &amp; UI states</span>
+568:             </div>
+569: 
+570:             <div class="project-actions-row">
+571:               <button type="button" class="btn-view-project" onclick="openProjectModal('scroller')">
+572:                 <span>VIEW CASE STUDY</span>
+573:                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+574:               </button>
+575:               <a href="https://drive.google.com/drive/folders/1zGgl4j7DXApgY53wCyXXkQ_auMhkfxrR?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-external-link">
+576:                 <span>PROJECT ARCHIVE</span>
+577:                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+578:               </a>
+579:             </div>
+580:           </div>
+581:         </article>
+582: 
+583:         <!-- ==================================================================
+584:              PROJECT 04: CINEMATIC 3D ENVIRONMENT
+585:              ================================================================== -->
+586:         <article class="project-card-large reverse" data-engine="unreal" data-type="cinematic" id="card-project-environment">
+587:           <div class="project-media-col" onclick="openProjectModal('environment')" tabindex="0" role="button" aria-label="Open Cinematic 3D Environment case study">
+588:             <img src="assets/images/project-environment.jpg" alt="Cinematic 3D Environment in Unreal Engine 5 and Blender" class="project-image" loading="lazy">
+589:             <div class="project-media-overlay" aria-hidden="true"></div>
+590:             <div class="project-quick-view-prompt">
+591:               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+592:               <span>EXPLORE CINEMATIC PASS</span>
+593:             </div>
+594:           </div>
+595: 
+596:           <div class="project-info-col">
+597:             <div class="project-meta-top">
+598:               <span class="project-category-badge">LIGHTING &bull; VFX &bull; CINEMATIC PRESENTATION</span>
+599:               <span class="project-engine-badge">
+600:                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
+
